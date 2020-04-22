@@ -14,9 +14,15 @@ public class MenuExampleGUI {
     private Pane mainPane;
 
     @FXML
-    public void showForm(ActionEvent event) throws IOException {
+    public void showForm1(ActionEvent event) throws IOException {
     	Parent form1 = FXMLLoader.load(getClass().getResource("Form-1.fxml"));    	
     	mainPane.getChildren().setAll(form1);
+    }
+
+    @FXML
+    public void showForm2(ActionEvent event) throws IOException {
+    	Parent form2 = FXMLLoader.load(getClass().getResource("Form-2.fxml"));    	
+    	mainPane.getChildren().setAll(form2);
     }
 
 }

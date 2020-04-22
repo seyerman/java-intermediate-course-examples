@@ -51,7 +51,7 @@ public class ContactManagerGUI {
      * This method is called each time when a fxml file associated with this object/class is loaded
      */
     public void initialize() {
-    	//the method (initilize) is called several times by diferents fxml file loads 
+    	//the method (initialize) is called several times by diferents fxml file loads 
     }
     
     private void initializeTableView() {
