@@ -1,5 +1,6 @@
 package ui;
 
+import javafx.scene.Parent;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Label;
@@ -50,20 +51,16 @@ public class ContactManagerGUI {
      * This method is called each time when a fxml file associated with this object/class is loaded
      */
     public void initialize() {
-    	
-    	//this condition is cause this method (initilize) is called several times by diferents fxml file loads 
-    	if(tvContactList!=null) {
-    		initilizeTableView();
-    	}
+    	//the method (initilize) is called several times by diferents fxml file loads 
     }
     
-    private void initilizeTableView() {
+    private void initializeTableView() {
     	ObservableList<Contact> observableList;
     	observableList = FXCollections.observableArrayList(contactManager.getContacts());
     	
 		tvContactList.setItems(observableList);
-		tcName.setCellValueFactory(new PropertyValueFactory<Contact,String>("name"));
-		tcEmail.setCellValueFactory(new PropertyValueFactory<Contact,String>("email"));		
+		tcName.setCellValueFactory(new PropertyValueFactory<Contact,String>("name")); //the tableview search for a method called getName
+		tcEmail.setCellValueFactory(new PropertyValueFactory<Contact,String>("email")); //the tableview search for a method called getEmail
     }
     
     @FXML
@@ -71,7 +68,7 @@ public class ContactManagerGUI {
 		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("add-contact.fxml"));
 		
 		fxmlLoader.setController(this);    	
-		BorderPane addContactPane = fxmlLoader.load();
+		Parent addContactPane = fxmlLoader.load();
     	
 		mainPanel.getChildren().clear();
     	mainPanel.setTop(addContactPane);
@@ -82,10 +79,11 @@ public class ContactManagerGUI {
 		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("contact-list.fxml"));
 		
 		fxmlLoader.setController(this);
-		BorderPane contactListPane = fxmlLoader.load();
+		Parent contactListPane = fxmlLoader.load();
     	
 		mainPanel.getChildren().clear();
     	mainPanel.setCenter(contactListPane);
+    	initializeTableView();
     }
     
     @FXML

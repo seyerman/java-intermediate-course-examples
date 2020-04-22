@@ -4,10 +4,9 @@ public class Contact {
 	private String name;
 	private String email;
 	
-	public Contact(String name, String email) {
-		super();
-		this.name = name;
-		this.email = email;
+	public Contact(String na, String em) {
+		name = na;
+		email = em;
 	}
 	
 	public String getName() {
