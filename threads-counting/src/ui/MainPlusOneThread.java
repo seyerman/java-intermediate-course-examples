@@ -1,16 +1,16 @@
 package ui;
 
-import model.Counting;
-import thread.CountingThread;
+import model.Counter;
+import thread.CounterThread;
 
 public class MainPlusOneThread {
 
 	public static void main(String[] args) throws InterruptedException {
 
 		
-		Counting c = new Counting(0, 100);
+		Counter c = new Counter(0, 100);
 		
-		CountingThread ct = new CountingThread(c, 100);		
+		CounterThread ct = new CounterThread(c, 100);		
 		
 		long init = System.currentTimeMillis();
 		

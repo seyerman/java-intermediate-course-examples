@@ -2,8 +2,8 @@ package ui;
 
 import java.util.Scanner;
 
-import model.Counting;
-import thread.CountingThread;
+import model.Counter;
+import thread.CounterThread;
 
 public class InteractiveMain {
 
@@ -19,13 +19,13 @@ public class InteractiveMain {
 		
 		sc.close();
 		
-		CountingThread[] threads = new CountingThread[amountThreads];
+		CounterThread[] threads = new CounterThread[amountThreads];
 		int intervals = maxNum/threads.length;
 		
 		for (int i = 0; i < threads.length; i++) {
 			System.out.println(i*intervals+" "+(i+1)*intervals);
-			Counting c = new Counting(i*intervals, (i+1)*intervals);
-			threads[i] = new CountingThread(c, sleepMillis);
+			Counter c = new Counter(i*intervals, (i+1)*intervals);
+			threads[i] = new CounterThread(c, sleepMillis);
 		}
 		
 		long init = System.currentTimeMillis();

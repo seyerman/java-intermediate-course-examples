@@ -1,24 +1,24 @@
 package ui;
 
-import model.Counting;
-import thread.CountingThread;
+import model.Counter;
+import thread.CounterThread;
 
 public class MainPlusFiveThreads {
 
 	public static void main(String[] args) throws InterruptedException {
 
 		
-		Counting c1 = new Counting(0, 20);
-		Counting c2 = new Counting(20, 40);
-		Counting c3 = new Counting(40, 60);
-		Counting c4 = new Counting(60, 80);
-		Counting c5 = new Counting(80, 100);
+		Counter c1 = new Counter(0, 20);
+		Counter c2 = new Counter(20, 40);
+		Counter c3 = new Counter(40, 60);
+		Counter c4 = new Counter(60, 80);
+		Counter c5 = new Counter(80, 100);
 		
-		CountingThread ct1 = new CountingThread(c1, 100);		
-		CountingThread ct2 = new CountingThread(c2, 100);
-		CountingThread ct3 = new CountingThread(c3, 100);
-		CountingThread ct4 = new CountingThread(c4, 100);
-		CountingThread ct5 = new CountingThread(c5, 100);
+		CounterThread ct1 = new CounterThread(c1, 100);		
+		CounterThread ct2 = new CounterThread(c2, 100);
+		CounterThread ct3 = new CounterThread(c3, 100);
+		CounterThread ct4 = new CounterThread(c4, 100);
+		CounterThread ct5 = new CounterThread(c5, 100);
 		
 		long init = System.currentTimeMillis();
 		

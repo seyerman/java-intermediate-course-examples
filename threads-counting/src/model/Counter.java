@@ -1,12 +1,12 @@
 package model;
 
-public class Counting {
+public class Counter {
 	private long startNumber;
 	private long endNumber;
 	
 	private long currentNumber;
 	
-	public Counting(long sn, long en) {
+	public Counter(long sn, long en) {
 		startNumber = sn;
 		endNumber = en;
 		

@@ -1,19 +1,19 @@
 package ui;
 
-import model.Counting;
+import model.Counter;
 
 public class OnlyMainThread {
 
 	public static void main(String[] args) throws InterruptedException {
 
 		
-		Counting counting = new Counting(0, 100);
+		Counter counter = new Counter(0, 100);
 				
 		long init = System.currentTimeMillis();
 		
-		while(counting.getCurrentNumber()<counting.getEndNumber()) {
-			counting.count();
-			System.out.println(counting.getCurrentNumber());
+		while(counter.getCurrentNumber()<counter.getEndNumber()) {
+			counter.count();
+			System.out.println(counter.getCurrentNumber());
 			Thread.sleep(100);
 		}
 		
