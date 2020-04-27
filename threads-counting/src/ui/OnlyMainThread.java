@@ -1,7 +1,6 @@
 package ui;
 
 import model.Counting;
-import thread.CountingThread;
 
 public class OnlyMainThread {
 
