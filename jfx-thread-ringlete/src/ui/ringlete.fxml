@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.RingleteGUI">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffa54f" height="200.0" layoutX="275.0" layoutY="171.0" stroke="BLACK" strokeType="INSIDE" width="10.0" />
+      <Rectangle fx:id="shSquare0" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="150.0" layoutX="205.0" layoutY="98.0" stroke="BLACK" strokeType="INSIDE" width="150.0" />
+      <Rectangle fx:id="shSquare1" arcHeight="5.0" arcWidth="5.0" fill="#ff4f1f" height="150.0" layoutX="205.0" layoutY="98.0" rotate="45.0" stroke="BLACK" strokeType="INSIDE" width="150.0" />
+      <Rectangle fx:id="shSquare2" arcHeight="5.0" arcWidth="5.0" fill="#21ff41" height="150.0" layoutX="205.0" layoutY="98.0" rotate="22.5" stroke="BLACK" strokeType="INSIDE" width="150.0" />
+      <Rectangle fx:id="shSquare3" arcHeight="5.0" arcWidth="5.0" fill="#fff921" height="150.0" layoutX="205.0" layoutY="98.0" rotate="67.5" stroke="BLACK" strokeType="INSIDE" width="150.0" />
+      <Circle fill="#ff1feb" layoutX="280.0" layoutY="173.0" radius="75.0" stroke="BLACK" strokeType="INSIDE" />
+      <Button fx:id="butWind" layoutX="205.0" layoutY="26.0" mnemonicParsing="false" onAction="#wind" text="Wind!" />
+      <Button fx:id="butStop" layoutX="307.0" layoutY="26.0" mnemonicParsing="false" onAction="#stop" text="Stop" />
+   </children>
+</Pane>
