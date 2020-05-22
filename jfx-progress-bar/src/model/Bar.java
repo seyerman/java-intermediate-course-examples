@@ -14,9 +14,10 @@ public class Bar {
 	}
 	
 	public void advance() {
-		progressLevel++;
 		if(progressLevel>=MAX_LEVEL) {
 			active = false;
+		}else {			
+			progressLevel++;
 		}
 	}
 	
