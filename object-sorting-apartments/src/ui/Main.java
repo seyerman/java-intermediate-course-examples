@@ -43,7 +43,7 @@ public class Main {
 		System.out.println(condo.getApartments());
 	}
 
-	private static void objectSortingStrings() {
+	public static void objectSortingStrings() {
 		String[] strs = {
 			"Juan",
 			"Bibiana",
