@@ -48,6 +48,15 @@ public class Neighborhood implements Comparable<Neighborhood>{
 		return comp;
 	}
 	
+	public int compareToByHousesAndPopulation(Neighborhood otherN) {
+		int comp;
+		comp = houses-otherN.getHouses();
+		if(comp==0) {
+			comp = population-otherN.getPopulation();
+		}
+		return comp;
+	}
+	
 	public String toString() {
 		return "\n"+name+","+area+","+population+","+houses+","+type;
 	}
