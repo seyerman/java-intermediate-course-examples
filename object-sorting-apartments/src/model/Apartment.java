@@ -56,6 +56,18 @@ public class Apartment implements Comparable<Apartment>{
 		return comp;
 	}
 	
+	public int compareToByPeopleAndNomenclature(Apartment otherAp) {
+		int comp;
+		
+		comp = people - otherAp.getPeople();
+		
+		if(comp==0) {
+			comp = nomenclature.compareTo(otherAp.getNomenclature());
+		}
+		
+		return comp;
+	}
+	
 	public String toString() {
 		return "\n"+number+building+","+area+","+people+","+nomenclature;
 	}

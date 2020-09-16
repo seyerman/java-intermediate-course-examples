@@ -41,6 +41,16 @@ public class Main {
 		
 		System.out.println("After Sorting by Area");
 		System.out.println(condo.getApartments());
+		
+		condo.sortByPeopleAndNomenclature();
+		
+		System.out.println("After Sorting by People and Nomenclature");
+		System.out.println(condo.getApartments());
+		
+		condo.sortByBuildingAndNumber();
+		
+		System.out.println("After Sorting by Building and Number");
+		System.out.println(condo.getApartments());
 	}
 
 	public static void objectSortingStrings() {
