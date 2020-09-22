@@ -16,7 +16,7 @@ public class Team {
 			players.add(p);
 		}else {
 			int i = 0;
-			while(p.getShirtNumber() > players.get(i).getShirtNumber()) {
+			while(i<players.size() && p.getShirtNumber() > players.get(i).getShirtNumber()) {
 				i++;
 			}
 			players.add(i,p);
