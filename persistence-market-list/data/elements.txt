@@ -1,0 +1,3 @@
+Mora;3.2
+Galletas;3.0
+Fríjoles;5.4
