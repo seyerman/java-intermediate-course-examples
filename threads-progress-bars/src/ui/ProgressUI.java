@@ -17,7 +17,7 @@ public class ProgressUI {
 		
 		threads = new ProgressGadgetThread[NUM_THREADS];
 		for(int i=0;i<NUM_THREADS;i++) {
-			threads[i] = new ProgressGadgetThread(progressG[i],this);
+			threads[i] = new ProgressGadgetThread(progressG[i],this,100+(int)(Math.random()*400));
 		}
 	}
 	
@@ -25,6 +25,7 @@ public class ProgressUI {
 		for(ProgressGadgetThread pgt: threads) {
 			pgt.start();
 		}
+		System.out.println("[S][   SIMPLE PROGRESS BAR   ][   LINES PROGRESS BAR   ][   ROTATE PROGRESS BAR   ][     SPACE SHIP BAR     ][     ARROW BAR     ]");
 	}
 
 	public void refresh() {

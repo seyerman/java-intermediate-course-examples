@@ -27,8 +27,8 @@ public class SimpleProgressBar implements ProgressGadget{
 		}
 	}
 	
-	private int getPercent() {
-		return (int)(current*100.0/maximum);
+	private String getPercent() {
+		return String.format("%3d",(int)(current*100.0/maximum));
 	}
 
 	@Override

@@ -6,10 +6,12 @@ import ui.ProgressUI;
 public class ProgressGadgetThread extends Thread{
 	private ProgressGadget pg;
 	private ProgressUI psui;
+	private long sleepTime;
 	
-	public ProgressGadgetThread(ProgressGadget p, ProgressUI ui) {
+	public ProgressGadgetThread(ProgressGadget p, ProgressUI ui, long st) {
 		pg = p;
 		psui = ui;
+		sleepTime = st;
 	}
 	
 	public void run() {
@@ -18,7 +20,7 @@ public class ProgressGadgetThread extends Thread{
 			psui.refresh();
 			
 			try {
-				Thread.sleep(1000);
+				Thread.sleep(sleepTime);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
