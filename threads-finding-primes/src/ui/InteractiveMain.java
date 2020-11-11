@@ -14,7 +14,7 @@ public class InteractiveMain {
 		int maxNum = Integer.parseInt(sc.nextLine());
 		System.out.print("Print all numbers -prime and no primes-? (0 only primes, 1 all numbers): ");
 		boolean printAll = Integer.parseInt(sc.nextLine())==1;
-		System.out.print("What prime verification method should I use? (0 all numbers complete, 1 all numbers parcial, 2 until square root): ");
+		System.out.print("What prime verification method should I use?\n(0 all numbers complete, 1 all numbers parcial, 2 until square root): ");
 		int methodUsed = Integer.parseInt(sc.nextLine());
 		System.out.print("How many threads do you want to use to search?: ");
 		int amountThreads = Integer.parseInt(sc.nextLine());
