@@ -36,8 +36,12 @@ public class SimpleProgressBar implements ProgressGadget{
 			for (int i = 0; i < numberFilledChars; i++) {
 				bar = bar.replaceFirst(" ", filling+"");				
 			}
-			bar = bar.replaceFirst(" ", currentChar+"");
+			bar = bar.replaceFirst(" ", getCurrentChar());
 		}
+	}
+	
+	protected String getCurrentChar() {
+		return currentChar+"";
 	}
 	
 	private String getPercent() {
