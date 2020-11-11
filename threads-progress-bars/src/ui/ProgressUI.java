@@ -2,6 +2,7 @@ package ui;
 
 import java.util.Scanner;
 
+import model.BounceProgressBar;
 import model.ProgressGadget;
 import model.RotateProgressBar;
 import model.SimpleProgressBar;
@@ -11,7 +12,7 @@ import thread.ProgressGadgetThread;
 public class ProgressUI {
 	private ProgressGadgetThread[] threads;
 	private ProgressGadget[] progressG;
-	public static final int NUM_THREADS = 4;
+	public static final int NUM_THREADS = 5;
 
 	public ProgressUI() {
 	}
@@ -22,6 +23,7 @@ public class ProgressUI {
 		progressG[1] = new SimpleProgressBar(maximums[1],'#');
 		progressG[2] = new SimpleProgressBar(maximums[2],'=','-');
 		progressG[3] = new RotateProgressBar(maximums[3],'o',new char[] {'|','/','-','\\'});
+		progressG[4] = new BounceProgressBar(maximums[4],"<-=->");
 		
 		threads = new ProgressGadgetThread[NUM_THREADS];
 		for(int i=0;i<NUM_THREADS;i++) {
@@ -47,9 +49,7 @@ public class ProgressUI {
 		for(ProgressGadgetThread pgt: threads) {
 			pgt.start();
 		}
-
-		System.out.println("[S][ SIMPLE PROG BAR ]    [ LINES PROGR BAR ]    [ ROTATE PROG BAR ]    [ SPACESHIP BAR ][  ARROW BAR  ]");
-		System.out.flush();
+		System.out.println("[S][ SIMPLE PROG BAR ]    [ LINES PROGR BAR ]    [ ROTATE PROG BAR ]    [  SPACESHIP BAR  ]    [    ARROW BAR    ]");
 	}
 
 	public void refresh() {
@@ -58,6 +58,5 @@ public class ProgressUI {
 			progressState += pg.getState();
 		}
 		System.out.print(progressState);
-		System.out.flush();
 	}
 }

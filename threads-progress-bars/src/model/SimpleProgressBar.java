@@ -40,13 +40,9 @@ public class SimpleProgressBar extends BasicProgress{
 		return currentChar+"";
 	}
 	
-	private String getPercent() {
-		return String.format("%3d",(int)(current*100.0/maximum));
-	}
-
 	@Override
 	public String getState() {
-		return bar+getPercent()+"%";
+		return bar+getPercentage()+"%";
 	}
 	
 	@Override

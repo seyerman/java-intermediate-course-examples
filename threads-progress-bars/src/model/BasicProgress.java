@@ -9,4 +9,7 @@ public abstract class BasicProgress  implements ProgressGadget{
 		maximum = max;
 	}
 
+	public String getPercentage() {
+		return String.format("%3d",(int)(current*100.0/maximum));
+	}
 }
