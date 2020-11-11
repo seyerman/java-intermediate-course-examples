@@ -1,12 +1,12 @@
 package model;
 
-public class SimpleProgressBar {
+public class SimpleProgressSymbol {
 	private String currentState;
 	private int currentPos;
 	
-	public static final String[] states = {"|","\\","-","/"};
+	public static final String[] states = {"|","/","-","\\"};
 	
-	public SimpleProgressBar() {
+	public SimpleProgressSymbol() {
 		currentPos = 0;
 		currentState = states[currentPos];
 	}
