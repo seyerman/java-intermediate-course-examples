@@ -1,22 +1,19 @@
 package model;
 
-public class SimpleProgressSymbol implements ProgressGadget{
+public class SimpleProgressSymbol extends BasicProgress{
 	private String currentState;
-	private int currentPos;
-	private int maximum;
 	
 	public static final String[] states = {"|","/","-","\\"};
 	
 	public SimpleProgressSymbol(int max) {
-		currentPos = 0;
-		maximum = max;
-		currentState = states[currentPos];
+		super(max);
+		currentState = states[current];
 	}
 	
 	@Override
 	public void advance() {
-		currentPos = currentPos+1;
-		currentState = states[currentPos % states.length];
+		current = current+1;
+		currentState = states[current % states.length];
 	}
 	
 	@Override
@@ -26,6 +23,6 @@ public class SimpleProgressSymbol implements ProgressGadget{
 	
 	@Override
 	public boolean finished() {
-		return currentPos>=maximum;
+		return current>=maximum;
 	}
 }
