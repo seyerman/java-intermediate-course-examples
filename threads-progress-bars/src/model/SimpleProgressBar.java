@@ -1,16 +1,28 @@
 package model;
 
 public class SimpleProgressBar implements ProgressGadget{
-	public String bar;
-	public int maximum;
-	public int current;
+	private String bar;
+	private int maximum;
+	private int current;
+	private char filling;
+	private char currentChar;
 	
-	public String template = "[                         ]";
+	public String template = "[                 ]";
 	
-	public SimpleProgressBar(int max) {
+	public SimpleProgressBar(int max, char fill, char currCh) {
+		init(max, fill, currCh);
+	}
+	
+	public SimpleProgressBar(int max, char fill) {
+		init(max, fill, fill);
+	}
+	
+	private void init(int max, char fill, char currCh) {
 		bar = template;
+		filling = fill;
+		currentChar = currCh;
 		current = 0;
-		maximum = max;
+		maximum = max;		
 	}
 	
 	@Override
@@ -22,8 +34,9 @@ public class SimpleProgressBar implements ProgressGadget{
 			int numberFilledChars = (int)((current/(double)maximum)*numberBarChars);
 			bar = template;
 			for (int i = 0; i < numberFilledChars; i++) {
-				bar = bar.replaceFirst(" ", "#");				
+				bar = bar.replaceFirst(" ", filling+"");				
 			}
+			bar = bar.replaceFirst(" ", currentChar+"");
 		}
 	}
 	
