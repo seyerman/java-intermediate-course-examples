@@ -26,6 +26,8 @@ public class PrimeNumberVerifier {
 	public boolean isCurrentPrime() {
 		if(currentNumber<2) {
 			return false;
+		}else if(currentNumber==2) {
+			return true;
 		}
 		
 		boolean isPrime = true;
