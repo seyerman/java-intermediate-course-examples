@@ -3,6 +3,7 @@ package model;
 public class BounceProgressBar extends BasicProgress{
 	private String widgetRight;
 	private String widgetLeft;
+	private String currentWidget;
 	private int direction;
 	private String bar;
 	private int widgetPos;
@@ -10,9 +11,10 @@ public class BounceProgressBar extends BasicProgress{
 	public final static int RIGHT = 1;
 	public final static int LEFT = -1;
 	
-	public BounceProgressBar(int max, String wr, String wl) {
+	public BounceProgressBar(int max, String wr, String wl, String templ) {
 		super(max);
 		init(wr,wl);
+		template = templ;
 	}
 	
 	public BounceProgressBar(int max, String w) {
@@ -25,29 +27,39 @@ public class BounceProgressBar extends BasicProgress{
 		widgetLeft  = wl;
 		widgetPos = 0;
 		direction = RIGHT;
-		bar = template.replaceFirst(getCharsString(widgetRight.length(),' '), widgetRight);
+		currentWidget = widgetRight;
+		putWidget();
 	}
 	
-	private String getCharsString(int n, char c) {
-		String str = "";
-		for (int i = 0; i < n; i++) {
-			str += c;
-		}
-		return str;
+	private void putWidget() {
+		bar = template.substring(0, widgetPos+1)
+			+ currentWidget
+		    + template.substring(widgetPos+currentWidget.length()+1);
 	}
 	
 	@Override
 	public void advance() {
-		
+		if(current < maximum) {
+			current++;
+			widgetPos += direction;
+			
+			if(direction==RIGHT && widgetPos+widgetRight.length()>template.length()-2) {
+				direction = LEFT;
+				widgetPos += direction;
+				currentWidget = widgetLeft;
+			}
+			if(direction==LEFT && widgetPos<0) {
+				direction = RIGHT;
+				widgetPos += direction;
+				currentWidget = widgetRight;
+			}
+			
+			putWidget();
+		}
 	}
 
 	@Override
 	public String getState() {
-		return bar;
-	}
-
-	@Override
-	public boolean finished() {
-		return true;
+		return getStateWithPercentaje(bar);
 	}
 }

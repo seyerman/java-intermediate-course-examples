@@ -42,11 +42,6 @@ public class SimpleProgressBar extends BasicProgress{
 	
 	@Override
 	public String getState() {
-		return bar+getPercentage()+"%";
-	}
-	
-	@Override
-	public boolean finished() {
-		return current>=maximum;
-	}
+		return getStateWithPercentaje(bar);
+	}	
 }

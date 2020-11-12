@@ -18,11 +18,6 @@ public class SimpleProgressSymbol extends BasicProgress{
 	
 	@Override
 	public String getState() {
-		return "["+currentState+"]";
-	}
-	
-	@Override
-	public boolean finished() {
-		return current>=maximum;
+		return getStateWithPercentaje("["+currentState+"]");
 	}
 }
