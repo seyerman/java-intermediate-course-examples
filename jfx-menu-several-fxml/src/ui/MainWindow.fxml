@@ -6,14 +6,14 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 
-
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="233.0" prefWidth="395.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.MenuExampleGUI">
    <children>
       <MenuBar>
         <menus>
           <Menu mnemonicParsing="false" text="File">
             <items>
-              <MenuItem mnemonicParsing="false" onAction="#showForm" text="Show Form" />
+              <MenuItem mnemonicParsing="false" onAction="#showForm1" text="Show Form 1" />
+                  <MenuItem mnemonicParsing="false" onAction="#showForm2" text="Show Form 2" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Edit">

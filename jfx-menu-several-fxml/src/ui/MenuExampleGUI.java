@@ -24,5 +24,5 @@ public class MenuExampleGUI {
     	Parent form2 = FXMLLoader.load(getClass().getResource("Form-2.fxml"));    	
     	mainPane.getChildren().setAll(form2);
     }
-
+    
 }
