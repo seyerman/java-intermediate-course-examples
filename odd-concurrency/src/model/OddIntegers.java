@@ -7,7 +7,7 @@ public class OddIntegers {
 		count = 0;
 	}
 	
-	public void increaseCount(long c) {
+	public synchronized void increaseCount(long c) {
 		count += c;
 	}
 	
