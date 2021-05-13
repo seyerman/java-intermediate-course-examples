@@ -2,7 +2,7 @@ package ui;
 
 import java.io.Console;
 
-public class Main {
+public class Main01 {
 	public static void main(String[] args) throws InterruptedException {
         String[] spinner = new String[] {"\u0008/", "\u0008-", "\u0008\\", "\u0008|" };
         Console console = System.console();

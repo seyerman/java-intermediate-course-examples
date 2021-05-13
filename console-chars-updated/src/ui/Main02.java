@@ -1,6 +1,6 @@
 package ui;
 
-public class Main2 {
+public class Main02 {
 	public static void main(String[] args) throws InterruptedException {
         String[] spinner = new String[] {"\u0008/", "\u0008-", "\u0008\\", "\u0008|" };
         System.out.print("|");

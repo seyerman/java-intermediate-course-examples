@@ -1,6 +1,6 @@
 package ui;
 
-public class Main8 {
+public class Main08 {
 	private static final StringBuilder res = new StringBuilder();;
 
 	static String progress(int pct) {

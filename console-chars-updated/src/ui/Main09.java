@@ -1,6 +1,6 @@
 package ui;
 
-public class Main9 {
+public class Main09 {
 
 	public static void main(String[] args) throws InterruptedException {
 		StringBuilder str1 = new StringBuilder("[>========================]");

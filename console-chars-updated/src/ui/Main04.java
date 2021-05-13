@@ -2,7 +2,7 @@ package ui;
 
 import java.io.IOException;
 
-public class Main4 {
+public class Main04 {
 	public static void clrscr(){
 	    //Clears Screen in java
 	    try {
@@ -23,7 +23,7 @@ public class Main4 {
 		//clrscr();
 		System.out.print("Erase una vez\n");
 		System.out.print("Un gato loco que\n");
-		System.out.print("Andaba por ahí\n");
+		System.out.print("Andaba por ahï¿½\n");
 		System.out.print("Haciendo de las suyas\n");
 		System.out.print("Travesura tras travesura");
 		System.out.print("\b");

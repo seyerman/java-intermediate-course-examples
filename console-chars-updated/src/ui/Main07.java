@@ -2,7 +2,7 @@ package ui;
 
 import java.io.IOException;
 
-public class Main7 {
+public class Main07 {
 	public static void clrscr(){
 	    //Clears Screen in java
 	    try {
