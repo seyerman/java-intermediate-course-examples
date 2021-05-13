@@ -24,8 +24,8 @@ public class Main11 {
 		String dir1 = DOWN;
 		String dir2 = LEFT;
 		
-		System.out.print(ESC+"2J");
-		System.out.print(ESC+"0G"+ESC+"0d");
+		System.out.print(ESC+"2J");//Clear screen
+		System.out.print(ESC+"0G"+ESC+"0d");//Cursor in 0,0
 		
 		System.out.print(ESC+TEXT_FORMAT[color]+"m"+ch);
 		Thread.sleep(sleep);
